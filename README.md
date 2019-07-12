@@ -1,7 +1,7 @@
 This is a WIP repo that will serve as a test environment for a custom `ldd` implementation.
 
 ```
-$ git clone ... && cd ...
-$ docker build -t nontrivial .
-$ docker run -v $PWD:/development nontrivial
+$ git clone git@github.com:haampie/lddtest.git && cd lddtest
+$ docker build -t lddtest .
+$ docker run -v $PWD:/development lddtest
 ```
