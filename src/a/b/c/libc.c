@@ -1,3 +1,5 @@
+int d();
+
 int c() {
-    return 42;
+    return d();
 }

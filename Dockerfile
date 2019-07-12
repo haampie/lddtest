@@ -5,6 +5,6 @@ RUN apt-get update && apt install --no-install-recommends -y binutils build-esse
 RUN mkdir -p /development
 WORKDIR /development
 
-ENTRYPOINT ["make"]
+#ENTRYPOINT ["make"]
 
 
