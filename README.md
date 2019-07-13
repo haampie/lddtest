@@ -30,10 +30,9 @@ main <- liba <- libb <- libc <- libd
 ```
 
 - The `main` executable has an `RPATH` set to `$ORIGIN/a` = `src/a`
-- `liblibb.so` has a `RUNPATH` set to `$ORIGIN/b` == `src/a/b/`
-- `liblibc.so` has no `RPATH` or `RUNPATH` (but it inherits the `RPATH` from `main`)
-- `liblibd.so` has no `RPATH` or `RUNPATH`
-
+- `libliba.so` has an `RPATH` set to `$ORIGIN/b` == `src/a/b` (I think according to the ELF specs this RPATH on a shared lib should be ignored, but ldd thinks otherwise!)
+- `liblibb.so` does not have `RPATH` or `RUNPATH` set (but it inherits the `RPATH` from `main`, so that `liblibd.so` can be located)
+- `liblibd.so` does not have `RPATH` or `RUNAPTH` set.
 
 ## `ldd` vs `lddtree`
 
